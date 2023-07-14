@@ -40,6 +40,8 @@ SHARED_APPS=[
     "django.contrib.staticfiles",
     'apps.base',
     'apps.users',
+    'rest_framework.authtoken',
+    'apps.RRHH',
 ]
 
 TENANT_APPS=[
@@ -53,6 +55,8 @@ TENANT_APPS=[
     'simple_history',
     'apps.base',
     'apps.users',
+    'rest_framework.authtoken',
+    'apps.RRHH',
 ]
 
 
@@ -148,6 +152,9 @@ USE_TZ = True
 
 
 AUTH_USER_MODEL = 'users.User'
+
+
+TOKEN_EXPIRED_AFTER_SECONDS = 10000
 
 
 # Static files (CSS, JavaScript, Images)
