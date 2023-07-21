@@ -1,7 +1,7 @@
 from django.db import models
 from datetime import datetime
 from simple_history.models import HistoricalRecords
-from apps .base.models import BaseModel
+from apps .base.models import BaseModel, EmployeesBase
 
 # Create your models here.
 
@@ -93,37 +93,8 @@ class Employee(BaseModel):
         return f"{self.name}{self.last_name}"
 
 
-class TemporaryEmployee(BaseModel):
-    pass
-
-
-class ContractorEmployee(BaseModel):
-
-    PAYMENT_CHOICES = [
-        ('hourly', 'Pago por Hora'),
-        ('daily', 'Pago por Día'),
-        ('contract', 'Pago por Contrato'),
-    ]
-
-    first_name = models.CharField('Nombres', max_length=100)
-    last_name = models.CharField('Apellidos', max_length=100)
-    address = models.CharField('Dirección', max_length=200)
-    phone = models.BigIntegerField('Teléfono', max_length=20)
-    email = models.EmailField('Correo Electrónico')
-    cv = models.ImageField('CV', upload_to='cv-contractor/', blank=True, null=True)
-    identification_number = models.BigIntegerField('Número de Identificación', max_length=20, unique=True)
-    identification_image = models.ImageField('Copia Cedula', upload_to='cv-contractor/', blank=True, null=True)
-    professional_id = models.BigIntegerField('Numero Tarjeta Profesional', blank=True, null=True)
-    professional_image = models.ImageField('Copia Tarjeta Profesional', upload_to='cv-contractor/', blank=True, null=True)
-    rut = models.IntegerField('RUT', max_length=20, unique=True)
-    image_rut = models.ImageField('Copia Rut', upload_to='cv-contractor/', blank=True, null=True)
-    health_certificate = models.ImageField('Afiliacion de Eps', upload_to='cv-contractor', blank=True, null=True)
-    social_security = models.ImageField('Seguridad Social', upload_to='cv-contractor', blank=True, null=True)
-    fingerprint = models.BinaryField(null=True, blank=True)
-    start_date = models.DateField('Fecha de Inicio del Contrato')
-    end_date = models.DateField('Fecha de Fin del Contrato')
-    payment_type = models.CharField('Tipo de Pago', max_length=10, choices=PAYMENT_CHOICES)
-    payment_value = models.DecimalField('Valor de Pago', max_digits=8, decimal_places=2)
+class TemporaryEmployee(EmployeesBase):
+    description = models.CharField('Descripción', max_length=100, help_text='Pon apuntes consideres necesarios ')
     historical = HistoricalRecords()
 
 
@@ -135,27 +106,41 @@ class ContractorEmployee(BaseModel):
     @_history_user.setter
     def _history_user(self, value):
         self.change_by = value
+    
+    class Meta:
+        verbose_name = 'Empleado Temporal'
+        verbose_name_plural = 'Empleados Temporales'
+    
+    def __str__(self):
+        return self.first_name
 
 
-    def calculate_contract_value(self, hours=None, days=None):
-        if self.payment_type == 'hourly' and hours is not None:
-            return self.payment_value * hours
-        elif self.payment_type == 'daily' and days is not None:
-            return self.payment_value * days
-        elif self.payment_type == 'contract':
-            return self.payment_value
-        else:
-            return None
+
+class ContractorEmployee(EmployeesBase):
+    description = models.CharField('Descripción', max_length=100, blank=True, null=True, help_text='Pon apuntes consideres necesarios ')
+    rut = models.CharField('RUT', unique=True)
+    image_rut = models.ImageField('Copia Rut', upload_to='cv-contractor/', blank=True, null=True)
+    historical = HistoricalRecords()
+
+
+    @property
+    def _history_user(self):
+        return self.change_by
+    
+
+    @_history_user.setter
+    def _history_user(self, value):
+        self.change_by = value
+    
 
     class Meta:
         verbose_name = 'Contratista'
         verbose_name_plural = 'Contratistas'
     
     def __str__(self):
-        return self.identification_number
+        return self.first_name
 
 
-    
 
 
 

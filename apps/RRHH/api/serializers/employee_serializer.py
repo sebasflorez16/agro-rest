@@ -17,6 +17,7 @@ class EmployeeSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         return {
             'id' : instance.id,
+            'identification_number': instance.identification_number,
             'name' : f"{instance.name} {instance.last_name}",
             'email' : instance.email,
             'phone' : instance.phone,

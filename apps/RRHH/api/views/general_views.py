@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 
-from apps.RRHH.api.serializers.serializers import DepartmentSerializer, PositionSerializer, AttendanceSerializer
+from apps.RRHH.api.serializers.serializers import *
 from apps.RRHH.models import *
 
 
@@ -20,3 +20,4 @@ class PositionViewSet(viewsets.ModelViewSet):
 
 class AttendanceViewSet(viewsets.ModelViewSet):
     serializer_class = AttendanceSerializer
+
