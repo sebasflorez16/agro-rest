@@ -42,6 +42,7 @@ SHARED_APPS=[
     'apps.users',
     'rest_framework.authtoken',
     'apps.RRHH',
+    'apps.agro_supplies',
 ]
 
 TENANT_APPS=[
@@ -57,6 +58,7 @@ TENANT_APPS=[
     'apps.users',
     'rest_framework.authtoken',
     'apps.RRHH',
+    'apps.agro_supplies',
 ]
 
 

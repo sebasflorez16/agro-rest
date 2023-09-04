@@ -6,7 +6,7 @@ from simple_history.models import HistoricalRecords
 
 # Create your models here.
 
-#Modelo cliente para django-tenants
+# Modelo cliente para django-tenants
 class Client(TenantMixin):
     name = models.CharField(max_length=100)
     paid_until = models.DateField()
@@ -37,16 +37,12 @@ class BaseModel(models.Model):
         pass
 
 
-
-
 class EmployeesBase(models.Model):
-
     PAYMENT_CHOICES = [
         ('hourly', 'Pago por Hora'),
         ('daily', 'Pago por Día'),
         ('contract', 'Pago por Contrato'),
     ]
-
 
     id = models.AutoField(primary_key=True)
     identification_number = models.BigIntegerField('Número de Identificación', unique=True)
@@ -55,11 +51,12 @@ class EmployeesBase(models.Model):
     last_name = models.CharField('Apellidos', max_length=100)
     address = models.CharField('Dirección', max_length=200)
     phone = models.BigIntegerField('Teléfono')
-    email = models.EmailField('Correo Electrónico', blank = True, null=True)
+    email = models.EmailField('Correo Electrónico', blank=True, null=True)
     state = models.BooleanField('Estado', default=True)
     cv = models.ImageField('CV', upload_to='cv-contractor/', blank=True, null=True)
     professional_id = models.BigIntegerField('Numero Tarjeta Profesional', blank=True, null=True)
-    professional_image = models.ImageField('Copia Tarjeta Profesional', upload_to='cv-contractor/', blank=True, null=True)
+    professional_image = models.ImageField('Copia Tarjeta Profesional', upload_to='cv-contractor/', blank=True,
+                                           null=True)
     health_certificate = models.ImageField('Afiliacion de Eps', upload_to='cv-contractor', blank=True, null=True)
     social_security = models.ImageField('Seguridad Social', upload_to='cv-contractor', blank=True, null=True)
     fingerprint = models.BinaryField(null=True, blank=True)
@@ -70,17 +67,16 @@ class EmployeesBase(models.Model):
     created_date = models.DateField('Fecha de Creación', auto_now=False, auto_now_add=True)
     modified_date = models.DateField('Fecha de Modificacion', auto_now=True, auto_now_add=False)
     deleted_date = models.DateField('Fecha de Eliminacion', auto_now=True, auto_now_add=False)
-    historical = HistoricalRecords()
+    historical = HistoricalRecords(inherit=True)  # Esto hace que los modelos que hereden de este sepa que es abstrac
+    # y tambien para que hereden toda su funcionalidad
 
     @property
     def _history_user(self):
         return self.change_by
-    
 
     @_history_user.setter
     def _history_user(self, value):
         self.change_by = value
-    
 
     def calculate_contract_value(self, hours=None, days=None):
         if self.payment_type == 'hourly' and hours is not None:

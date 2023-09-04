@@ -1,0 +1,324 @@
+[
+  {
+    "fields": {
+      "name": "Variedad Fedearroz 60.",
+      "lote": "Lote 123",
+      "created": "",
+      "edited": "",
+      "siembra": {
+        "dry_and_covered_seed": "120 - 180 kg/ha.",
+        "high_precision_planting": "100 - 130 kg/ha.",
+        "number_of_plants": "200 - 250 Plantas/m2.",
+        "number_of_panicles": "500 - 600 Panículas/m2."
+      },
+      "vigor": "Alto",
+      "tillering": "Alto Macollamiento.",
+      "overturning": "Tolerante. Precaucíon en zonas bajas por exceso de agua y exceso de fertilización nitrogenada.",
+      "herbicide_susceptibility": {
+        "fenoxaprop": "Sensible a altas dosis.",
+        "metsulfuron": "Sensible a altas dosis.",
+        "propanil": "Sensible a altas dosis.",
+        "hormonal herbicides": "Evite aplicar en especial después de los 40 dias de emergencia del cultivo."
+      },
+      "health": {
+        "tolerance": "Piricularia.",
+        "susceptibility": "Rhizoctonia y hoja blanca en campo.",
+        "climatic_conditions": "En condiciones y/o manejos desfavorables se puede presentar Gaeumanomyces (Mancha Naranja) y Helminthosporium."
+      },
+      "nutrition": {
+        "nitrogen": "(N): Aplicar en 4 fraccionamientos: El 20% a inicio en macollamiento, el 30% en macollamiento activo, el 20% restante entre las 60 -  65 dde.",
+        "potassium": "(K): Aplicar junto a los 4 fraccionamientos de nitrogeno asi: inicion macollamiento 20%, macollamiento efectivo 20%, el 40% inicio de primordio y 20% en desarrrollo de panícula.",
+        "phosphorus": "(P): Incorporar el 100% en la pre siembra o en la siembra, si esto no es posible aplicar en el macollamiento.",
+        "minor_and_secondary_elements": "Se recomienda aplicar B, Zn, Cu, Ca, S, Mg, según análisis de suelo. Se aplican en el momento de la siembra o en la primera fertilización y los secundarios fraccionados entre inicio de macollamiento e inicio de primordio floral.",
+        "considerations": ""
+      },
+      "harvest": "Se recomienda con humedad entre 22 - 26%.",
+      "environmental_requirements": "Esta variedad es de alto potencial productivo en las épocas de mayor oferta lumínica de año.",
+      "general_recommendations": "La semilla certificada de FEDEARROZ es un prodcuto\r\ncuya calidad ha sido verificada\r\n\r\nLas recomendaciones de manejo deben ser\r\nadecuadas a las condiciones de cada lote y al\r\nmicroclima local\r\nLa calidad de la preparación del terreno es indispensable\r\npara la densidad de siembra\r\nEn la siembra destapada se pierde semilla,\r\npero al aumentar la densidad se incrementan\r\nlos costos y riesgos de enfermendades.\r\nLa geminación de la semilla disminuye al\r\nalmacernar junto a otros agroquimicos y fertilizantes\r\n y no controlar la humedad y temperatura\r\nLas etapas de formación de panícula\r\nfloración y llenado de grano requieren buenas condiciones climaticas\r\nHaga análisis de suelos cada dos cosechas para \r\ntomar la mejor desición sobre la fertilización",
+      "ica_producer_record": "No. 2405 del 25/09/2000",
+      "record_holder": "FEDEARROZ",
+      "documentation": {
+        "name": "Registro Bibliográfico",
+        "link": "https://fedearroz.s3.amazonaws.com/media/documents/Ficha_tecnica_Fedearroz_60.pdf"
+      },
+      "model": "agro_supplies.Variety",
+      "pk": 1
+    }
+  },
+  {
+    "fields": {
+      "name": "Variedad Fedearroz 67.",
+      "lote": "Lote 124",
+      "created": "",
+      "edited": "",
+      "siembra": {
+        "dry_and_covered_seed": "150 - 160 kg/ha. Tipo Voleo",
+        "high_precision_planting": "100 - 130 kg/ha.",
+        "number_of_plants": "",
+        "number_of_panicles": ""
+      },
+      "vigor": "Crecimiento inicial rápido ligado a pre-abonamiento adecuado y un manejo temprano de malezas.",
+      "tillering": "Presenta alto Macollamiento.",
+      "overturning": "Tolerante. Precaucíon en zonas bajas por exceso de agua y exceso de fertilización nitrogenada.",
+      "herbicide_susceptibility": {
+        "fenoxaprop": "",
+        "metsulfuron": "",
+        "propanil": "",
+        "hormonal herbicides": ""
+      },
+      "health": {
+        "tolerance": "Pyricularia grisae.",
+        "susceptibility": "hoja blanca en campo, Rhizoctonia solani",
+        "climatic_conditions": "En condiciones y/o manejos desfavorables se puede presentar Gaeumanomyces (Mancha Naranja) y Helminthosporium."
+      },
+      "nutrition": {
+        "nitrogen": "(N): Fraccionamiento dependiendo la zona de siembra.(5% Al momento de la siembra, 40-45% Inicion de macollamiento, 40-45% Final primordio floral hasta inicio de embuchamiento",
+        "potassium": "(K): Fraccione entre siembra y embuchamiento.",
+        "phosphorus": "(P): Se recomienda en pre-siembra incorporada.",
+        "minor_and_secondary_elements": "Se recomienda aplicar Ca, Mg, S según análisis de suelo. Se aplican en el momento de la siembra y los secundarios fraccionados en la fase vegetativa. El plan de fertilización debe estar basado en el análisis de suelo y en la oferta ambiental.",
+        "considerations": ""
+      },
+      "harvest": "Resistente al retraso de cosecha. Se recomienda con humedad entre 22 - 24%.",
+      "environmental_requirements": "Las etapas de formación de panícula, floración y llenado de grano, requiere buenas condiciones de temperatura y luminosidad.",
+      "general_recommendations": "",
+      "ica_producer_record": "No. 1420 del 6/04/2009",
+      "record_holder": "FEDEARROZ",
+      "documentation": {
+        "name": "Registro Bibliográfico",
+        "link": "https://fedearroz.s3.amazonaws.com/media/documents/Ficha_tecnica_Fedearroz_67.pdf"
+      }
+    },
+    "model": "agro_supplies.Variety",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "name": "Variedad Fedearroz 68.",
+      "lote": "Lote 125",
+      "created": "",
+      "edited": "",
+      "siembra": {
+        "dry_and_covered_seed": "160 - 180 kg/ha. Tipo Voleo",
+        "high_precision_planting": "100 - 150 kg/ha.",
+        "number_of_plants": "",
+        "number_of_panicles": ""
+      },
+      "vigor": "Crecimiento inicial rápido ligado a pre-abonamiento adecuado y un manejo temprano de malezas.",
+      "tillering": "Intermedio. Usar densidades bajas de semilla en lotes bajos y en lotes altos evitar densidades mayores a 180kg/ha. Realizar pre-abonamiento y evitar retrasos de fertilización.",
+      "overturning": "",
+      "herbicide_susceptibility": {
+        "fenoxaprop": "",
+        "metsulfuron": "",
+        "propanil": "",
+        "hormonal herbicides": "",
+        "considerations": "No presenta susceptibilidad en particular. Deben evitarse aplicaciones de herbicidas después de los 30 dias despues de emergencia"
+      },
+      "health": {
+        "tolerance": "Pyricularia grisae.",
+        "susceptibility": "hoja blanca en campo, Rhizoctonia solani",
+        "climatic_conditions": ""
+      },
+      "nutrition": {
+        "nitrogen": "(N): Debido a las precocidad se recomienda manejar la nutrición de acuerdo a las etapas de desarrollo.\r\n Los abonamientos se deben hacer mas tempranos.(5% Al pre-abonamiento, 20% Inicio de macollamiento, 30% Pleno macollamiento,\r\n25% Antes de inicio de primordio floral, 20% Inicion de embuchamiento",
+        "potassium": "(K): Fraccionar con el nitrógeno desde la pre-siembra.",
+        "phosphorus": "(P): Aplicación recomendada en pre-siembra incorporada especialmente en riego. En secanoaplicar con una distribución de \r\n50% en pre-siembra y 50% al inicion del macollamiento.",
+        "minor_and_secondary_elements": "Se recomienda aplicar Ca, Mg, S según análisis de suelo. Se aplican en el momento de la siembra y los secundarios fraccionados en la fase vegetativa. El plan de fertilización debe estar basado en el análisis de suelo y en la oferta ambiental."
+      },
+      "harvest": "Resistente al retraso de cosecha. Rango óptimo de cosecha entre 22 - 24%.",
+      "environmental_requirements": "La expresión de las etapas de desarrollo puede cambiar en la época húmeda(abril-octubre) y epoca seca(noviembre-marzo) en los llanos orientales\r\nLa presencia de aristas en el grano puede incrementar bajo \r\ncondiciones de altas temperatura..",
+      "general_recommendations": "",
+      "ica_producer_record": "No. 1420 del 6/04/2009",
+      "record_holder": "FEDEARROZ",
+      "documentation": {
+        "name": "Registro Bibliográfico",
+        "link": "https://fedearroz.s3.amazonaws.com/media/documents/Ficha_tecnica_Fedearroz_68.pdf"
+      }
+    },
+    "model": "agro_supplies.Variety",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "name": "Variedad Fedearroz F-70.",
+      "lote": "Lote 126",
+      "created": "",
+      "edited": "",
+      "siembra": {
+        "dry_and_covered_seed": "En siembras al voleo con semilla tapada, la densidad recomendada es de 150 - 180 kg de semilla certificada por hectárea.",
+        "high_precision_planting": "En surcos se recomienda una densidad de 130 a 150 kg de semilla certificada por hectárea.",
+        "number_of_plants": "",
+        "number_of_panicles": ""
+      },
+      "vigor": "Crecimiento inicial rápido, el cual está ligado a un adecuado abonamiento al momento de la siembra y un manejo temprano de malezas.",
+      "tillering": "Intermedio. Realizar abonamiento al momento de la siembra y evitar retrasos en la fertilización. Garantizar la uniformidad en la humedad del lote.",
+      "overturning": "",
+      "herbicide_susceptibility": {
+        "fenoxaprop": "",
+        "metsulfuron": "",
+        "propanil": "",
+        "hormonal herbicides": "",
+        "considerations": "La variedad no ha presentado susceptibilidad en\r\nparticular a los herbicidas de uso común en arroz. Se recomienda \r\ntener en cuenta las especificaciones técnicas de manejo de los herbicidas, \r\n pero no se debe efectuar aplicación de hormonales después de los 30 dde."
+      },
+      "health": {
+        "tolerance": "Tolerancia intermedis Pyricularia grisae. Mancha de grano y baja\r\nseveridad al añublo bacterial de la panicula(Burkholderia glumae). Presenta tolerancia a manchado de grano y baja severidad \r\nfrente al añublo bacterial de la panícula (Burkholderia glumae). La \r\ntolerancia a insectos y enfermedades es una cualidad biológica que \r\npuede cambiar",
+        "susceptibility": "hoja blanca en campo. Puede presentar incidencia de Gaeumannomyces graminis (mal del pie/pudrición del tallo). ",
+        "climatic_conditions": ""
+      },
+      "nutrition": {
+        "nitrogen": "(N): Nitrógeno : 23,9 kg/Ton. El 75% del Nitrógeno debe aplicarse\r\nantes del inicio del primordio floral",
+        "potassium": "(K): -Potasio : 29,6 kg/Ton.",
+        "phosphorus": "(P): Fosforo: 3,1 kg/Ton.",
+        "minor_and_secondary_elements": ""
+      },
+      "harvest": "Es tolerante al retraso de cosecha. Se recomienda el corte cuando\r\n el grano tenga una humedad entre el 22 y 24%.",
+      "environmental_requirements": "La variedad ha mostrado \r\nestabilidad en sus rendimientos durante los dos semestres. Sin embargo, su mejor desempeño \r\nagronómico se presenta en las épocas de siembra de mejor oferta ambiental (época de mayor \r\nradiación, temperaturas máximas, mínimas y humedad relativa moderadas).",
+      "general_recommendations": "La semilla certificada de FEDEARROZ es un prodcuto\r\ncuya calidad ha sido verificada\r\n\r\nLas recomendaciones de manejo deben ser\r\nadecuadas a las condiciones de cada lote y al\r\nmicroclima local\r\nLa calidad de la preparación del terreno es indispensable\r\npara la densidad de siembra\r\nEn la siembra destapada se pierde semilla,\r\npero al aumentar la densidad se incrementan\r\nlos costos y riesgos de enfermendades.\r\nLa geminación de la semilla disminuye al\r\nalmacernar junto a otros agroquimicos y fertilizantes\r\n y no controlar la humedad y temperatura\r\nLas etapas de formación de panícula\r\nfloración y llenado de grano requieren buenas condiciones climaticas\r\nHaga análisis de suelos cada dos cosechas para \r\ntomar la mejor decisión sobre la fertilización",
+      "ica_producer_record": "No. 2405 del 25/09/2000",
+      "record_holder": "FEDEARROZ",
+      "documentation": {
+        "name": "Registro Bibliográfico",
+        "link": "https://fedearroz.s3.amazonaws.com/media/documents/Ficha_tecnica_Fedearroz_F-_70.pdf"
+      }
+    },
+    "model": "agro_supplies.Variety",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "name": "Variedad Fedearroz 2000.",
+      "lote": "Lote 127",
+      "created": "",
+      "edited": "",
+      "siembra": {
+        "dry_and_covered_seed": "120 • 180 kg/ha. Tipo Voleo",
+        "high_precision_planting": "100 a 130 kg/ha.",
+        "number_of_plants": "200 a 250 plantas/m2",
+        "number_of_panicles": "500 a 600 panículas/m2"
+      },
+      "vigor": "Crecimiento inicial rápido. El vigor inicial mejora cuando se preabona.",
+      "tillering": "Presenta alto macollamiento.",
+      "overturning": "La variedad es tolerante al volcamiento, si embargo se debe \r\nevitar el exceso de fertilización nitrogenada y lámina de agua demasiado alta. ",
+      "herbicide_susceptibility": {
+        "fenoxaprop": "",
+        "metsulfuron": "",
+        "propanil": "",
+        "hormonal herbicides": "",
+        "considerations": ""
+      },
+      "health": {
+        "tolerance": "Es resistente al virus de la Hoja Blanca (la única de América Latina).",
+        "susceptibility": "Es susceptible a Piriculorio en hoja y cuello, Burkholderia glumoe y \r\nRhizoctonio.",
+        "climatic_conditions": ""
+      },
+      "nutrition": {
+        "nitrogen": "(N): : Aplicar en 4 fraccionamientos: El 20% a Inicio de macolla\r\nmiento, el 30% en macollamiento activo, el 30% a inicio de primordk, y el \r\n20% restante en formación de la panícula",
+        "potassium": "(K): Fraccionar con el nitrógeno desde la pre-siembra.",
+        "phosphorus": "(P): Aplicar en presiembra el 50% de su requerimiento y lo restante \r\njunto con los tres primeros fraccionamientos nitrógeno",
+        "minor_and_secondary_elements": ""
+      },
+      "harvest": "Se recomienda la cosecha entre el 23-24% de humedad en campo.",
+      "environmental_requirements": "Es de amplia adaptabilidad y \r\nestabílldad en ambos semestres, puede presen­tar \r\narista en el grano por electo climático. ",
+      "general_recommendations": "La semilla certificada de FEDEARROZ es un prodcuto\r\ncuya calidad ha sido verificada\r\n\r\nLas recomendaciones de manejo deben ser\r\nadecuadas a las condiciones de cada lote y al\r\nmicroclima local\r\nLa calidad de la preparación del terreno es indispensable\r\npara la densidad de siembra\r\nEn la siembra destapada se pierde semilla,\r\npero al aumentar la densidad se incrementan\r\nlos costos y riesgos de enfermendades.\r\nLa geminación de la semilla disminuye al\r\nalmacernar junto a otros agroquimicos y fertilizantes\r\n y no controlar la humedad y temperatura\r\nLas etapas de formación de panícula\r\nfloración y llenado de grano requieren buenas condiciones climaticas\r\nHaga análisis de suelos cada dos cosechas para \r\ntomar la mejor decisión sobre la fertilización",
+      "ica_producer_record": "No. 2405 del 25/09/2000",
+      "record_holder": "FEDEARROZ",
+      "documentation": {
+        "name": "Registro Bibliográfico",
+        "link": "https://fedearroz.s3.amazonaws.com/media/documents/Ficha_tecnica_Fedearroz_2000.pdf"
+      }
+    },
+    "model": "agro_supplies.Variety",
+    "pk": 5
+  },
+  {
+    "fields": {
+      "name": "Variedad Fedearroz 2020.",
+      "lote": "Lote 128",
+      "created": "",
+      "edited": "",
+      "siembra": {
+        "dry_and_covered_seed": "",
+        "high_precision_planting": "",
+        "number_of_plants": "",
+        "number_of_panicles": ""
+      },
+      "vigor": "",
+      "tillering": "",
+      "overturning": "",
+      "herbicide_susceptibility": {
+        "fenoxaprop": "",
+        "metsulfuron": "",
+        "propanil": "",
+        "hormonal herbicides": "",
+        "considerations": ""
+      },
+      "health": {
+        "tolerance": "",
+        "susceptibility": "",
+        "climatic_conditions": ""
+      },
+      "nutrition": {
+        "nitrogen": "(N): 19 a 22 kg/Ton.",
+        "potassium": "(K): 20 a 25 Kg/Ton.",
+        "phosphorus": "(P): 3 a 5 Kg/Ton.",
+        "minor_and_secondary_elements": ""
+      },
+      "harvest": "",
+      "environmental_requirements": "",
+      "general_recommendations": "",
+      "ica_producer_record": "FPA1368-MA-2I-1A-4S-MA",
+      "record_holder": "FEDEARROZ",
+      "documentation": {
+        "name": "Registro Bibliográfico",
+        "link": "https://fedearroz.s3.amazonaws.com/media/documents/Ficha_Tecnica_Fedearroz_2020.pdf"
+      }
+    },
+    "model": "agro_supplies.Variety",
+    "pk": 6
+  },
+  {
+    "fields": {
+      "name": "Variedad Fedearroz FL-ITAGUA.",
+      "lote": "Lote 129",
+      "created": "",
+      "edited": "",
+      "siembra": {
+        "dry_and_covered_seed": "150 - 170 kg/ha. Tipo Voleo",
+        "high_precision_planting": "100 a 150 kg/ha.",
+        "number_of_plants": "",
+        "number_of_panicles": "2"
+      },
+      "vigor": "Crecimiento inicial rápido, el cual está ligado a un adecuado\r\nabonamiento al momento de la siembra y un manejo temprano de\r\nmalezas.",
+      "tillering": "Intermedio. Realizar abonamiento al momento de la\r\nsiembra y evitar retrasos en la fertilización. Garantizar la uniformidad\r\nen la humedad del lote.",
+      "overturning": "",
+      "herbicide_susceptibility": {
+        "fenoxaprop": "",
+        "metsulfuron": "",
+        "propanil": "",
+        "hormonal herbicides": "",
+        "considerations": ""
+      },
+      "health": {
+        "tolerance": ": La variedad presenta tolerancia intermedia a\r\nPyricularia y al Virus de la Hoja Blanca. Puede presentar incidencia de\r\nGaeumannomyces graminis (mal del pie/pudrición del tallo). Presenta\r\ntolerancia a manchado de grano y baja severidad frente al añublo bacterial\r\nde la panícula (Burkholderia glumae).\r\nLa tolerancia a insectos y enfermedades es una cualidad biológica que puede\r\ncambiar. Es necesario revisar periódicamente su comportamiento, con base\r\nen el monitoreo fitosanitario y la asesoría de un asistente técnico.",
+        "susceptibility": "La variedad No ha presentado susceptibilidad en particular a\r\nlos herbicidas de uso común en arroz.",
+        "climatic_conditions": ""
+      },
+      "nutrition": {
+        "nitrogen": "(N): Nitrógeno: 19 a 22kg/Ton",
+        "potassium": "(K): Potasio: 20 a 25 kg/Ton.",
+        "phosphorus": "(P): Fosforo: 3 a 5 kg/Ton",
+        "minor_and_secondary_elements": ""
+      },
+      "harvest": "Su mejor rendimiento de trilla e índice\r\nde pilada se obtienen efectuando la cosecha con\r\nhumedad del grano entre el 24 a 26%. Esta variedad\r\nno es tolerante al retraso en cosecha por lo que se\r\nrecomienda cosecharla de manera oportuna. El\r\nrendimiento de molino del material ha presentado\r\nvalores entre 67,9 y 73,2%, mientras que el índice\r\nde pilada se mantiene entre 52,0 y 62,2%.",
+      "environmental_requirements": "La variedad ha mostrado\r\nestabilidad en sus rendimientos durante los dos\r\nsemestres. Sin embargo, su mejor desempeño\r\nagronómico se presenta en las épocas de siembra\r\nde mejor oferta ambiental (época de mayor\r\nradiación, temperaturas máximas, mínimas y\r\nhumedad relativa moderadas).",
+      "general_recommendations": "La semilla certificada de FEDEARROZ es un prodcuto\r\ncuya calidad ha sido verificada\r\n\r\nLas recomendaciones de manejo deben ser\r\nadecuadas a las condiciones de cada lote y al\r\nmicroclima local\r\nLa calidad de la preparación del terreno es indispensable\r\npara la densidad de siembra\r\nEn la siembra destapada se pierde semilla,\r\npero al aumentar la densidad se incrementan\r\nlos costos y riesgos de enfermendades.\r\nLa geminación de la semilla disminuye al\r\nalmacernar junto a otros agroquimicos y fertilizantes\r\n y no controlar la humedad y temperatura\r\nLas etapas de formación de panícula\r\nfloración y llenado de grano requieren buenas condiciones climaticas\r\nHaga análisis de suelos cada dos cosechas para \r\ntomar la mejor decisión sobre la fertilización",
+      "ica_producer_record": "No. 2405 del 25/09/2000",
+      "record_holder": "FEDEARROZ",
+      "documentation": {
+        "name": "Registro Bibliográfico",
+        "link": "https://fedearroz.s3.amazonaws.com/media/documents/fIcha_tecnica_Fedearroz_FL_Itagua.pdf"
+      }
+    },
+    "model": "agro_supplies.Variety",
+    "pk": 7
+  }
+]

@@ -23,4 +23,5 @@ urlpatterns = [
     path('logout/', Logout.as_view(), name = 'logout'),
     path('users/', include('apps.users.api.urls')),
     path('employee/', include('apps.RRHH.api.views.routers')),
+    path('seeds/', include('apps.agro_supplies.api.views.routers')),
 ]
