@@ -79,10 +79,10 @@ class Employee(BaseModel):
         verbose_name = 'Empleado'
         verbose_name_plural = 'Empleados'
 
-    def employee_age(date_of_birth):
+    def employee_age(self):  # Se debe realizar o volver a donde tomaba por valor date-¿_of_birth
         today = datetime.today()
-        age = date_of_birth - today.year
-        if today.month < date_of_birth.month or (today.month == date_of_birth.month and today.day < date_of_birth.day):
+        age = self.date_of_birth - today.year
+        if today.month < self.month or (today.month == self.month and today.day < self.day):
             age -= 1
         return age
 
