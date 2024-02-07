@@ -126,7 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django_tenants.postgresql_backend',
-        'NAME': 'agro-postgres',
+        'NAME': 'agrotech',
         'USER': 'postgres',
         'PASSWORD': 'guibsonsid.16',
         'HOST': 'localhost',
