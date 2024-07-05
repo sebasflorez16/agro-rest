@@ -12,26 +12,35 @@ class SeedVarietyViewSet(ModelViewSet, Authentication):
     serializer_class = SeedSerializer
 
     def create(self, request, *args, **kwargs):
-        # Ruta al archivo JSON en tu proyecto
-        json_file_path = 'apps/agro_supplies/api/views/fixtures/seeds.json'
-
-        try:
-            # Abre y lee el archivo JSON desde la ubicación del proyecto
-            with open(json_file_path, 'r') as json_file:
-                seeds_data = json.load(json_file)
-        except FileNotFoundError:
-            return Response({'detail': 'El archivo JSON no se encontró'}, status=status.HTTP_404_NOT_FOUND)
-        except json.JSONDecodeError:
-            return Response({'detail': 'El archivo JSON es inválido'}, status=status.HTTP_400_BAD_REQUEST)
-
-        # Itera a través de los objetos en el archivo JSON y crea instancias de Variety
-        for seed_data in seeds_data:
-            serializer = SeedSerializer(data=seed_data['fields'])
-            """nombre = seed_data['fields']['name']
-            healt = seed_data['fields']['health']
-            info = f'{nombre}, {healt}'
-            print(info)"""
+        # Verifica si se proporciona un archivo JSON o un solo objeto JSON
+        if 'application/json' in request.content_type:
+            # Si es un solo objeto JSON, crea una instancia
+            serializer = SeedSerializer(data=request.data)
             if serializer.is_valid():
-                serializer.save()
+                instance = Variety.objects.create(**serializer.validated_data)
+                return Response({'detail': 'Instancia Variety creada exitosamente'}, status=status.HTTP_201_CREATED)
+            else:
+                return Response({'detail': 'Datos JSON inválidos'}, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            # Si es un archivo JSON, lee y crea instancias desde el archivo
+            json_file_path = 'apps/agro_supplies/api/views/fixtures/seeds.json'
+            try:
+                with open(json_file_path, 'r') as json_file:
+                    seeds_data = json.load(json_file)
+            except FileNotFoundError:
+                return Response({'detail': 'El archivo JSON no se encontró'}, status=status.HTTP_404_NOT_FOUND)
+            except json.JSONDecodeError:
+                return Response({'detail': 'El archivo JSON es inválido'}, status=status.HTTP_400_BAD_REQUEST)
 
-        return Response({'detail': 'Objetos Variety creados exitosamente'}, status=status.HTTP_201_CREATED)
+            created_varieties = []
+            for seed_data in seeds_data:
+                serializer = SeedSerializer(data=seed_data['fields'])
+                if serializer.is_valid():
+                    instance, created = Variety.objects.get_or_create(**serializer.validated_data)
+                    if created:
+                        created_varieties.append(instance)
+                    else:
+                        # Puedes manejar el caso de instancias similares existentes aquí
+                        print(f'Instancia similar ya existe para {serializer.validated_data}')
+
+            return Response({'detail': 'Objetos Variety creados exitosamente', 'created_varieties': created_varieties}, status=status.HTTP_201_CREATED)

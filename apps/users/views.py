@@ -36,7 +36,7 @@ class Login(ObtainAuthToken):
         else:
             return Response({'Error': 'El usuario o la contraseña son invalidos'}, status = status.HTTP_400_BAD_REQUEST)
 
-        return Response({'mensaje':'Desde Response'}, status = status.HTTP_200_OK)
+    
 
 
 class Logout(APIView):
