@@ -90,7 +90,7 @@ class EmployeesBase(models.Model):
 
     class Meta:
         abstract = True
-        verbose_name = 'Empleado Base'
+        verbose_name = 'Empleado Bases'
         verbose_name_plural = 'Empleados Bases'
 
     def __str__(self):

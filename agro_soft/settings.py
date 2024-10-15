@@ -140,8 +140,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django_tenants.postgresql_backend',
         'NAME': 'agrotech',
+<<<<<<< HEAD
         'USER': 'sebastianflorez',
         'PASSWORD': 'guibsonsid.16', #Buscar la forma de guardar los passwords en otros lados.
+=======
+        'USER': 'postgres',
+        'PASSWORD': 'guibsonsid.16',
+>>>>>>> 8966b7d547f86cf55078118fc0a98a93b8d4ef45
         'HOST': 'localhost',
         'PORT': '5432'
     }
