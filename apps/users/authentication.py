@@ -1,4 +1,4 @@
-#Se va a colocar un tiempo de caducidad para el token
+"""#Se va a colocar un tiempo de caducidad para el token
 
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.exceptions import AuthenticationFailed
@@ -60,4 +60,4 @@ class ExpiringTokenAuthentication(TokenAuthentication):
                 message = "Su token ha expirado"
 
         
-        return (user, token, message, self.expired) #Una especie de contexto para los mensajes. si el message es None es que todo ha salido correcto
+        return (user, token, message, self.expired) #Una especie de contexto para los mensajes. si el message es None es que todo ha salido correcto"""

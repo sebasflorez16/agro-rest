@@ -1,13 +1,17 @@
+
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
 from rest_framework import status
 import json
-from apps.agro_supplies.models import Variety
-from apps.agro_supplies.api.seed_serializers.serializers import SeedSerializer
-from apps.users.authentication_mixins import Authentication
+from apps.agro_supplies.models import *
+from apps.agro_supplies.api.seed_serializers.serializers import *
+from rest_framework.permissions import IsAuthenticated
 
 
-class SeedVarietyViewSet(ModelViewSet, Authentication):
+# Se crea este script para la lectura de archivos json grandes
+class SeedVarietyViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
+
     queryset = Variety.objects.all()
     serializer_class = SeedSerializer
 
@@ -35,3 +39,64 @@ class SeedVarietyViewSet(ModelViewSet, Authentication):
                 serializer.save()
 
         return Response({'detail': 'Objetos Variety creados exitosamente'}, status=status.HTTP_201_CREATED)
+
+
+class CompanyViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
+
+    model = Company
+    serializer_class = CompanySerializer
+
+class SupplierViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
+
+    model = Supplier
+    serializer_class = SupplierSerializer
+
+class CategoryViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
+
+    model = Category
+    serializer_class = CategorySerializer
+
+class SubcategoryViewSet(ModelViewSet):
+    permission_classes =  [IsAuthenticated]
+
+    model = SubCategory
+    serializer_class = SubcategorySerializer
+
+class WarehouseViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
+
+    model = Warehouse
+    serializer_class = WarehouseSerializer
+
+class SupplyViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
+
+    model = Supply
+    serializer_class = SupplySerializer
+
+class CategoryEquipmentViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
+
+    model = CategoryEquipment
+    serializer_class = CategoryEquipmentSerializer
+
+class SubcategoryEquipmentViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
+
+    model = SubcategoryEquipment
+    serializer_class = SubcategoryEquipmentSerializer
+
+class ToolAndEquipmentViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
+
+    model = ToolAndEquipment
+    serializer_class = ToolAndEquipmentSerializer
+
+class ToolAssigmentViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
+
+    model = ToolAssignment
+    serializer_class = ToolAssignmentSerializer

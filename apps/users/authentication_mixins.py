@@ -1,6 +1,6 @@
 #Desarrollo del sistema de autenticacion para todas las vistas
 
-from rest_framework.authentication import get_authorization_header
+"""from rest_framework.authentication import get_authorization_header
 from apps.users.authentication import ExpiringTokenAuthentication
 
 from rest_framework.response import Response
@@ -29,11 +29,11 @@ class Authentication(object):
         
         return None
 
-        """
+
         En el archivo authetication.py validamos que el message si es None quiere decir que todo ha ido bien
         en este archivo valor a validar que el usuario y el token no sean None ejecuta el bloque de arriba y verifica
         si user is not None que nos retorne un mensaje o el usuario.
-        """
+
 
 
     def dispatch(self, request, *args, **kwargs): # se ejecuta primero en django y cancela la secuencia
@@ -57,6 +57,6 @@ class Authentication(object):
         return response
 
 
-        """No se puede enviar un response dentro de una clase que no herede de ninguna condicion por defectp
+    No se puede enviar un response dentro de una clase que no herede de ninguna condicion por defectp
         de rest_framwork como ListView, ViewSet para que se pueda dar manejo al response de debe poner 
         el acept_renderer para que renderise tipo JSON"""

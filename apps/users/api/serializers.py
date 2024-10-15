@@ -1,9 +1,6 @@
-
 from rest_framework import serializers
 from apps.users.models import User
-
-
-
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 
 class UserSerializerToken(serializers.ModelSerializer):
@@ -11,22 +8,39 @@ class UserSerializerToken(serializers.ModelSerializer):
         model = User
         fields = ('username', 'email', 'name', 'last_name')
 
-class UserSerializer(serializers.ModelSerializer):
+
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    @classmethod
+    def get_token(cls, user):
+        token = super().get_token(user)
+
+        # Agrega información adicional que quieras incluir en el token
+        token['username'] = user.username
+        token['email'] = user.email
+        token['name'] = user.name
+        token['last_name'] = user.last_name
+
+        return token
+
+    def validate(self, attrs):
+        # Llama a la validación original del TokenObtainPairSerializer
+        data = super().validate(attrs)
+
+        # Obtiene información adicional del usuario
+        user_data = UserSerializerToken(self.user).data
+
+        # Agrega información del usuario a la respuesta
+        data.update({
+            'user': user_data
+        })
+
+        return data
+
+
+class UserSerializer(TokenObtainPairSerializer):
     class Meta:
         model = User
         fields = '__all__'
-
-
-    def create(self,validated_data):
-        user = User(**validated_data)
-        user.set_password(validated_data['password'])
-        return user
-
-    def to_representation(self, instance):
-        representation = super().to_representation(instance)
-        fields_to_include = ['id', 'username', 'email']
-        return {field: representation[field] for field in fields_to_include}
-        
         
 
 class UserListSerializer(serializers.ModelSerializer):

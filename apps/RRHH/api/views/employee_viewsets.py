@@ -4,10 +4,11 @@ from rest_framework import status
 from rest_framework import viewsets
 from apps.RRHH.api.serializers.employee_serializer import EmployeeSerializer
 from apps.RRHH.api.serializers.serializers import ContractorSerializer, TemporarySerializer
-from apps.users.authentication_mixins import Authentication
+from rest_framework.permissions import IsAuthenticated
 
 
-class EmployeeViewSet(Authentication, ModelViewSet):
+class EmployeeViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
     serializer_class = EmployeeSerializer
 
     def get_queryset(self, pk=None):
@@ -44,7 +45,8 @@ class EmployeeViewSet(Authentication, ModelViewSet):
         return Response(employee_serializer.data, status=status.HTTP_200_OK)
 
 
-class ContractorViwSet(Authentication, ModelViewSet):
+class ContractorViwSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
     serializer_class = ContractorSerializer
 
     def get_queryset(self, pk=None):
@@ -65,6 +67,7 @@ class ContractorViwSet(Authentication, ModelViewSet):
 
 
 class TemporaryViewSet(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated]
     serializer_class = TemporarySerializer
 
     def retrieve(self, request, pk=None, *args, **kwargs):
